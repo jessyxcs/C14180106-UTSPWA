@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -11,6 +11,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
+import { DetailNotePage } from './detail-note/detail-note.page';
+
+const ROUTES: Routes = [
+  { path: 'detail-note/:index', component: DetailNotePage },
+];
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +27,7 @@ import { environment } from 'src/environments/environment';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     AngularFirestoreModule,
+    RouterModule.forRoot(ROUTES),
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
