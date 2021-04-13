@@ -1,0 +1,7 @@
+{
+  "name": "uts_pwa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
