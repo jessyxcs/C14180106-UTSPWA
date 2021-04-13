@@ -1,17 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Input Notes </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>INPUT NOTES</h1>
+  <ion-item>
+    <ion-label position="floating">Judul</ion-label>
+    <ion-input type="text" [(ngModel)]="inpJudul"></ion-input>
+  </ion-item>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-item>
+    <ion-label position="floating">Isi</ion-label>
+    <ion-input type="text" [(ngModel)]="inpIsi"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Tanggal</ion-label>
+    <ion-input type="text" [(ngModel)]="inpJudul"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nilai</ion-label>
+    <ion-input type="number" [(ngModel)]="inpNilai"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Gambar</ion-label><br />
+    <ion-button expand="block" color="secondary" (click)="uploadGambar()"
+      >Upload</ion-button
+    >
+  </ion-item>
+
+  <br /><br />
+  <ion-button expand="block" (click)="addNotes()">Add Notes</ion-button>
 </ion-content>
