@@ -18,7 +18,7 @@
 
   <ion-item>
     <ion-label position="floating">Tanggal</ion-label>
-    <ion-input type="text" [(ngModel)]="inpJudul"></ion-input>
+    <ion-input type="text" [(ngModel)]="inpTanggal"></ion-input>
   </ion-item>
 
   <ion-item>
@@ -34,5 +34,9 @@
   </ion-item>
 
   <br /><br />
-  <ion-button expand="block" (click)="addNotes()">Add Notes</ion-button>
+  <ion-button
+    expand="block"
+    (click)="addNotes(inpJudul, inpIsi, inpTanggal, inpNilai)"
+    >Add Notes</ion-button
+  >
 </ion-content>
